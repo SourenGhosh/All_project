@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Response Form TO The User</title>
+    </head>
+<body>
+    <h2>Response Page</h2>
+    <form action="{% url 'add_book'%}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="save_book">
+    </form>
+</body>
+
+</html>

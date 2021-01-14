@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Forms Response Catch</title>
+</head>
+<body>
+    <h2>Django Forms Respose Catch</h2>
+    <form action="{% url 'responseform' %}" method="post">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
